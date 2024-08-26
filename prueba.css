@@ -1,0 +1,230 @@
+/* Estilo general */
+.body {
+    background-color: rgba(19, 18, 18, 0.977);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* barra de navegación */
+.responsive-box {
+    width: 300px;
+    height: 40px;
+    margin: 10px auto;
+    padding: 0;
+    background-color: #f5f5f5;
+    border-radius: 60px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.responsive-box:hover {
+    transform: translateX(-50%) scale(1.05);
+}
+
+.responsive-box ul {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.responsive-box li {
+    flex: 1;
+    text-align: center;
+}
+
+.responsive-box a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 8px 0;
+    border-radius: 12px;
+    transition: background-color 0.3s;
+    display: block;
+    font-size: 0.9rem;
+}
+
+.responsive-box a:hover {
+    background-color: #e0e0e0;
+}
+
+/* Contenido de la página */
+.content {
+    margin-top: 200px;
+    color: white;
+    text-align: center;
+}
+
+/*contenedor  portafolio */
+.portfolio-container {
+    background-color: #222; 
+    color: white;
+    max-width: 850px; 
+    margin: 0 auto; 
+    padding: 20px; 
+}
+
+/*  imagen y botón de descarga */
+.portfolio-container img {
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.portfolio-container img:hover {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+}
+
+.portfolio-container .btn {
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.portfolio-container .btn:hover {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+/*desplazamiento */
+.separator {
+    border-top: 1px solid #bbb; 
+    width: 60%; 
+    margin: 0 auto; 
+    margin-top: 150px;
+    margin-bottom: 135px;
+}
+.separator2 {
+    border-top: 1px solid #bbb; 
+    width: 60%; 
+    margin: 0 auto; 
+    margin-top: 80px;
+    margin-bottom: 100px;
+}
+.scroll-indicator {
+    position: absolute;
+    bottom: 10px; 
+    left: 50%;
+    transform: translateX(-50%);
+    color: #bbb;
+    font-size: 24px; /* tamaño del icono */
+    cursor: pointer;
+    animation: bounce 1.5s infinite; /*animación de rebote */
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+} 
+
+/* proyectos */
+.container {
+    background-color: #222;
+}
+
+.icon-box {
+    width: 60px;
+    height: 60px;
+    background-color: #000;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: 0 15px; 
+}
+
+.icon-box img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.text-white {
+    color: #fff;
+}
+
+.separator-container {
+    text-align: center;
+    position: relative;
+    margin: 20px 0;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.mb-2 {
+    margin-bottom: 0.5rem;
+}
+
+.ml-2 {
+    margin-left: 0.5rem;
+}
+
+.custom-container {
+    max-width: 1200px; 
+    margin: 0 auto; /* Centrar el contenedor */
+    padding: 0 15px; 
+    text-align: center;
+}
+h4.text-white {
+    margin-bottom: 60px; 
+}
+
+/* Añadir animación a las tarjetas de los proyectos */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05); /*  tamaño de la tarjeta al pasar el ratón */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /*sombra más pronunciada */
+}
+
+/* tarjetas de proyectos */
+.card-img-top {
+    transition: transform 0.3s ease;
+}
+
+.card-img-top:hover {
+    transform: scale(1.1); /* Agranda la imagen al pasar el ratón */
+}
+
+/*  animación de entrada a las tarjetas de proyectos */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+
+.card-body {
+    padding: 15px;
+}
